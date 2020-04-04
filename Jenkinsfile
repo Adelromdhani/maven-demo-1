@@ -27,9 +27,7 @@ agent any
             steps {
                 echo 'Building start'
 					bat label: '', script: 'mvn clean install'
-				echo 'Building done'
-				
-				
+				echo 'Building done'	
             }	
         }
 		
