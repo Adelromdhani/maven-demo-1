@@ -88,7 +88,7 @@ agent any
     }
 	post {
 		always {
-				emailext body: 'test', subject: 'CI', to: 'adel.romdhani@esprit.tn'
+				emailext body: 'test', subject: 'CI', to: 'doula1205@live.fr'
 		}
 	}
 	
