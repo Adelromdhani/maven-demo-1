@@ -26,7 +26,7 @@ agent any
         stage('Build') {
             steps {
                 echo 'Building start'
-					bat label: '', script: '''mvn clean install'''
+					bat label: '', script: 'mvn clean install'
 				echo 'Building done'
 				
 				
@@ -36,7 +36,7 @@ agent any
         stage('Test') {
             steps {
 				echo 'Testing start'
-					bat label: '', script: '''mvn test'''
+					bat label: '', script: 'mvn test'
                 echo 'Testing done'
             }
         }
