@@ -18,7 +18,7 @@ agent any
 	stages {
         stage('Checkout') {
             steps {
-					git credentialsId: '70f0f8f1-c2cf-4624-ae38-902139a411ed', url: 'https://github.com/Adelromdhani/Maven.git'
+					git credentialsId: '70f0f8f1-c2cf-4624-ae38-902139a411ed', url: 'https://github.com/Adelromdhani/maven-demo-1'
                 echo 'Checkout'
             }
         }
