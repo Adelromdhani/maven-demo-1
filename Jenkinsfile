@@ -18,7 +18,7 @@ agent any
 	stages {
         stage('Checkout') {
             steps {
-					git credentialsId: '70f0f8f1-c2cf-4624-ae38-902139a411ed', url: 'https://github.com/Adelromdhani/maven-demo-1'
+					git credentialsId: 'GIT_credentials', url: 'https://github.com/Adelromdhani/maven-demo-1'
                 echo 'Checkout'
             }
         }
@@ -88,7 +88,7 @@ agent any
     }
 	post {
 		always {
-				emailext body: 'test', subject: 'CI', to: 'doula1205@live.fr'
+				emailext body: 'test', subject: 'CI', to: 'adel.romdhani@esprit.tn'
 		}
 	}
 	
