@@ -26,8 +26,8 @@ agent any
         stage('Build') {
             steps {
                 echo 'Building start'
-					
-						mvn clean install'''
+					bat label: '', script: 'mvn clean install'
+						
 				echo 'Building done'
             }	
         }
@@ -35,8 +35,8 @@ agent any
         stage('Test') {
             steps {
 				echo 'Testing start'
-					
-						mvn clean test'''
+					bat label: '', script: 'mvn test'
+						
                 echo 'Testing done'
             }
         }
