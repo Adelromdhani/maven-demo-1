@@ -87,9 +87,13 @@ agent any
         }
     }
 	post {
-		always {
-				emailext body: 'test', subject: 'CI', to: 'adel.romdhani@esprit.tn'
-		}
-	}
-	
+    	always {
+    		emailext attachLog: true, body: '''Dear all,
+
+Please find attached the result of the build pipeline.
+
+Kind regards,
+Adel ROMDHANI''', recipientProviders: [developers(), requestor()], subject: 'Build summary', to: 'adel.romdhani@esprit.tn'
+    	}
+    }
 }
